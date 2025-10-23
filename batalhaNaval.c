@@ -18,8 +18,9 @@ int main() {
             tabuleiro[i][j] = 0;
         }
     }
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
 
+
+    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Posicao do Navio Horizontal:
     int linhaNavioHorizontal = 3;
     int colunaNavioHorizontal = 2;
@@ -27,12 +28,21 @@ int main() {
 
     // Posicao do Navio Vertical:
     int linhaNavioVertical = 5;
-    int colunaNavioVertical = 3;
+    int colunaNavioVertical = 2;
     int tamanhoNavioVertical = 3;
+
+    // Posicao do Navio Diagonal1:
+    int linhaNavioDiagonal1 = 0;
+    int colunaNavioDiagonal1 = 8;
+    int tamanhoNavioDiagonal1 = 3;
+
+    // Posicao do Navio Diagonal2:
+    int linhaNavioDiagonal2 = 7;
+    int colunaNavioDiagonal2 = 4;
+    int tamanhoNavioDiagonal2 = 3;
 
 
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
-
     // Declarando posicao do Navio Horizontal:
     printf("-- Exibicao das Coordenadas dos Navios --\n");
     printf("--- Posicao do Navio Horizontal (tamanho %d) ---\n", tamanhoNavioHorizontal);
@@ -54,6 +64,26 @@ int main() {
         tabuleiro[linhaAtual][colunaNavioVertical] = 3;
         // Exibe a coordenada
         printf("Parte %d: (%d, %d)\n", i + 1, linhaAtual, colunaNavioVertical);
+    }
+    printf("\n");
+
+    // Declarando posicao do Navio Diagonal1:
+    printf("--- Posicao do Navio Diagonal1 (tamanho %d) ---\n", tamanhoNavioDiagonal1);
+    for (int i = 0; i < tamanhoNavioDiagonal1; i++)
+    {
+        tabuleiro[linhaNavioDiagonal1][colunaNavioDiagonal1] = 3;
+        printf("Parte %d: (%d,%d)\n", i + 1, linhaNavioDiagonal1, colunaNavioDiagonal1);
+        linhaNavioDiagonal1++, colunaNavioDiagonal1--;
+    }
+    printf("\n");
+
+    // Declarando posicao do Navio Diagonal2:
+    printf("--- Posicao do Navio Diagonal2 (tamanho %d) ---\n", tamanhoNavioDiagonal2);
+    for (int i = 0; i < tamanhoNavioDiagonal2; i++)
+    {
+        tabuleiro[linhaNavioDiagonal2][colunaNavioDiagonal2] = 3;
+        printf("Parte %d: (%d, %d)\n", i, linhaNavioDiagonal2, colunaNavioDiagonal2);
+        linhaNavioDiagonal2++, colunaNavioDiagonal2++;
     }
     printf("\n");
 
